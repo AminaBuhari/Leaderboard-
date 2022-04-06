@@ -1,3 +1,104 @@
-body {
-  background-color: blueviolet;
+@import url("http://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --background: white;
+  --lato: 'Lato', sans-serif;
+  --cocogoose: 'COCOGOOSE', sans-serif;
 }
+
+body {
+  background-color: var(--background);
+  width: 80%;
+  margin: 5% auto;
+ 
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  align-items: flex-start;
+  
+}
+
+
+/* form style */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.text-head {
+  font-family: var(--cocogoose);
+  font-size: 20px;
+  margin: 0;
+}
+
+input {
+  border: 2px solid black;
+  font-family: var(--cocogoose);
+  height: 20px;
+}
+
+
+.submit-button {
+  background-color: transparent;
+  box-shadow: 3px 3px black;
+  border: 2px solid black;
+  width: 50%;
+  margin-left: auto;
+  
+}
+
+
+/* scores style */
+
+.list-wrap {
+  width: 100%;
+}
+.list-heading{
+  display: flex;
+  gap: 70px;
+}
+
+.list-head {
+  font-family: var(--cocogoose);
+  font-size: 20px;
+  margin: 0;
+}
+
+.list-button {
+  padding: 0 2px;
+  width: 70px;
+  height: fit-content;
+  align-self: center;
+  border: 2px solid black;
+  box-shadow: 3px 3px black;
+  font-family: var(--cocogoose);
+  font-size: 12px;
+  /* margin-left: 50px; */
+}
+
+ul {
+  list-style: none;
+  border: 2px solid black;
+  padding: 0;
+  margin: 0;
+  margin-top: 10px;
+}
+
+.scores {
+  display: flex;
+  flex-direction: column;
+}
+
+.score {
+  padding: 10px;
+}
+
+.score:nth-child(even) {
+  background-color: lightgrey;
+}
+
