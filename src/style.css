@@ -19,7 +19,6 @@ body {
   align-items: flex-start;
 }
 
-
 /* form style */
 form {
   display: flex;
@@ -48,9 +47,7 @@ input {
   margin-left: auto;
 }
 
-
 /* scores style */
-
 .list-wrap {
   width: 100%;
 }
