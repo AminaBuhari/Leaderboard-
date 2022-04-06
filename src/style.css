@@ -10,7 +10,6 @@ body {
   background-color: var(--background);
   width: 80%;
   margin: 5% auto;
- 
 }
 
 .container {
@@ -18,7 +17,6 @@ body {
   justify-content: space-between;
   gap: 50px;
   align-items: flex-start;
-  
 }
 
 
@@ -42,14 +40,12 @@ input {
   height: 20px;
 }
 
-
 .submit-button {
   background-color: transparent;
   box-shadow: 3px 3px black;
   border: 2px solid black;
   width: 50%;
   margin-left: auto;
-  
 }
 
 
@@ -58,7 +54,8 @@ input {
 .list-wrap {
   width: 100%;
 }
-.list-heading{
+
+.list-heading {
   display: flex;
   gap: 70px;
 }
@@ -78,6 +75,7 @@ input {
   box-shadow: 3px 3px black;
   font-family: var(--cocogoose);
   font-size: 12px;
+
   /* margin-left: 50px; */
 }
 
@@ -101,4 +99,3 @@ ul {
 .score:nth-child(even) {
   background-color: lightgrey;
 }
-
