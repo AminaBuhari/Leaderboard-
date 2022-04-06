@@ -1,4 +1,6 @@
-# Web-pack
+# Leaderboard
+
+The leaderboard project is
 
 ## Built With
 
@@ -9,7 +11,7 @@
 
 ## Live Demo
 
-For a live demo of the Portfolio [click here]()
+For a live demo of the Portfolio [click here](https://aminabuhari.github.io/Leaderboard-/)
 
 ## Author
 
