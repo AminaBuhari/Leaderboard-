@@ -1,10 +1,13 @@
+import form from './modules/form.js';
+import listHolder from './modules/formList.js';
 import './style.css';
 
 function component() {
   const element = document.createElement('div');
+  element.classList.add('container');
 
-  // Lodash, currently included via a script, is required for this line to work
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+  element.appendChild(listHolder());
+  element.appendChild(form());
 
   return element;
 }
