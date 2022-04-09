@@ -40,7 +40,7 @@ input {
 }
 
 .submit-button {
-  background-color: transparent;
+  background-color: lightskyblue;
   box-shadow: 3px 3px black;
   border: 2px solid black;
   width: 50%;
@@ -72,8 +72,7 @@ input {
   box-shadow: 3px 3px black;
   font-family: var(--cocogoose);
   font-size: 12px;
-
-  /* margin-left: 50px; */
+  background-color: lightgreen;
 }
 
 ul {
