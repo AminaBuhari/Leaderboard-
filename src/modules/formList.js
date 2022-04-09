@@ -1,3 +1,4 @@
+import { newAPI } from "./api";
 export default () => {
   const listHolder = document.createElement('div');
   listHolder.classList.add('list-wrap');
@@ -14,17 +15,23 @@ export default () => {
   refreshButton.classList.add('list-button');
   refreshButton.innerText = 'Refresh';
   listHeading.appendChild(refreshButton);
+  refreshButton.onclick = () => { window.location.reload(); }
 
   const scoreDetails = document.createElement('ul');
   scoreDetails.classList.add('scores');
-  scoreDetails.innerHTML = `<li class="score"> Name: 100</li>
-                             <li class="score"> Name: 100</li>
-                             <li class="score"> Name: 100</li>
-                             <li class="score"> Name: 100</li>
-                             <li class="score"> Name: 100</li>`;
-
   listHolder.appendChild(listHeading);
+  scoreDetails.innerHTML = 'Hold on a second';
+  newAPI.scoreValue().then(
+    (leaderscores) => {
+      scoreDetails.innerHTML = '';
+      leaderscores.result.forEach((leaderscore) => {
+        scoreDetails.innerHTML += `<li class="score"> ${leaderscore.user}: ${leaderscore.score}</li>`;
+      });
+    },
+  ).catch(() => {
+    scoreDetails.innerHTML = 'Problem loading page';
+  });
+  
   listHolder.appendChild(scoreDetails);
-
   return listHolder;
 };
