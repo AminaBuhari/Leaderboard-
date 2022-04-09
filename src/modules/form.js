@@ -1,4 +1,5 @@
-import { scoresList, newAPI } from "./api";
+import { ScoresList, newAPI } from './api.js';
+
 export default () => {
   const form = document.createElement('form');
 
@@ -37,7 +38,7 @@ export default () => {
 
   form.onsubmit = (event) => {
     event.preventDefault();
-    const score = new scoresList({ player: nameField.value, score: scoreField.value });
+    const score = new ScoresList({ player: nameField.value, score: scoreField.value });
     bot.innerText = '';
     newAPI.enterForm(score.tojson()).then(
       (response) => {

@@ -1,4 +1,5 @@
-import { newAPI } from "./api";
+import { newAPI } from './api.js';
+
 export default () => {
   const listHolder = document.createElement('div');
   listHolder.classList.add('list-wrap');
@@ -15,7 +16,7 @@ export default () => {
   refreshButton.classList.add('list-button');
   refreshButton.innerText = 'Refresh';
   listHeading.appendChild(refreshButton);
-  refreshButton.onclick = () => { window.location.reload(); }
+  refreshButton.onclick = () => { window.location.reload(); };
 
   const scoreDetails = document.createElement('ul');
   scoreDetails.classList.add('scores');
@@ -31,7 +32,7 @@ export default () => {
   ).catch(() => {
     scoreDetails.innerHTML = 'Problem loading page';
   });
-  
+
   listHolder.appendChild(scoreDetails);
   return listHolder;
 };
